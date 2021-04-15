@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="./css/swiper.min.css">
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.swiper-container{
+				width: 500px;
+				height: 300px;
+			}
+			img{
+				width: 500px;
+				height: 300px;
+			}
+			.swiper-pagination-bullet{
+				width: 20px;
+				height: 20px;
+				line-height:20px;
+				color:#fff;
+				background-color: blueviolet;
+				font-size:10px;
+			}
+			.swiper-pagination-bullet-active{
+				background-color: #f00;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div>
+						<img src="./images/1.png" alt="">
+					</div>
+					
+				</div>
+				<div class="swiper-slide">
+					<div>
+						<img src="./images/2.png" alt="">
+					</div>
+					
+				</div>
+				<div class="swiper-slide">
+					<div>
+						<img src="./images/3.png" alt="">
+					</div>
+				</div>
+			</div>
+			 <div class="swiper-pagination"></div>
+		</div>
+	<script src="./js/swiper.min.js"></script>
+	<script>
+		new Swiper(".swiper-container",{
+			zoom:true,
+			
+			
+			pagination: {
+			    el: '.swiper-pagination',
+				
+				clickable: true,
+				renderBullet: function (index, className) {
+				  return '<span class="' + className + '">' + (index + 1) + '</span>';
+				}
+			  }
+		})
+	</script>
+	</body>
+</html>
